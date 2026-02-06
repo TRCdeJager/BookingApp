@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
-async function getAllReviews(where) {
+async function getAllReviews({ where }) {
     const prisma = new PrismaClient()
 
     return await prisma.review.findMany({

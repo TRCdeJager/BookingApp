@@ -1,0 +1,13 @@
+{
+    "model": {
+        "hostId": "string",
+        "title": "string",
+        "description": "string",
+        "location": "string",
+        "pricePerNight": "float",
+        "bedroomCount": "int",
+        "bathRoomCount": "int",
+        "maxGuestCount": "int",
+        "rating": "int"
+    }
+}

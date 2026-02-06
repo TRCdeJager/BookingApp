@@ -1,0 +1,11 @@
+{
+    "model": {
+        "username": "string",
+        "password": "string",
+        "name": "string",
+        "email": "string",
+        "phoneNumber": "string",
+        "pictureUrl": "string",
+        "aboutMe": "string"
+    }
+}

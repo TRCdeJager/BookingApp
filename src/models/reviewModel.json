@@ -1,0 +1,8 @@
+{
+    "model": {
+        "userId": "string",
+        "propertyId": "string",
+        "rating": "int",
+        "comment": "string"
+    }
+}

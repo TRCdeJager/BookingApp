@@ -1,18 +1,16 @@
 import baseRouter from "../utils/baseRouter.js";
 import getAllReviews from "../services/reviews/getAllReviews.js";
 import getReviewById from "../services/reviews/getReviewById.js";
-import createReview from "../services/reviews/createReview.js";
-import updateReviewById from "../services/reviews/updateReviewById.js";
-import deleteReviewById from "../services/reviews/deleteReviewById.js";
+import modelData from "../models/reviewModel.json" with {type: "json"};
 
 const
-    model = {
-        userId: 'string'
-        , propertyId: 'string'
-        , rating: 'int'
-        , comment: 'string'
-    }
-    , router = baseRouter('Review', model, getAllReviews, getReviewById, createReview, updateReviewById, deleteReviewById);
+    model = modelData.model
+    , router = baseRouter({
+        itemType: 'review'
+        , model: model
+        , getAllItems: getAllReviews
+        , getItemById: getReviewById
+    });
 
 export default router;
 

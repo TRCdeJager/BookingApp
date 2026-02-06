@@ -1,7 +1,7 @@
 import NotFoundError from '../../errors/NotFoundError.js';
 import { PrismaClient } from '@prisma/client';
 
-async function getUserById(id) {
+async function getUserById({ id }) {
     const prisma = new PrismaClient()
     let user;
     if (user = await prisma.user.findUnique({

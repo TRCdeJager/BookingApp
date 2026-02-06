@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
-async function getAllProperties(where) {
+async function getAllProperties({ where }) {
     const prisma = new PrismaClient();
 
     return prisma.property.findMany({

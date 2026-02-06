@@ -1,0 +1,11 @@
+{
+    "model": {
+        "userId": "string",
+        "propertyId": "string",
+        "checkinDate": "dateTime",
+        "checkoutDate": "dateTime",
+        "numberOfGuests": "int",
+        "totalPrice": "int",
+        "bookingStatus": "string"
+    }
+}

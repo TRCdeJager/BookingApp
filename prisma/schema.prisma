@@ -29,6 +29,9 @@ model Review {
 
   user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   property Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([propertyId])
 }
 
 model Booking {
@@ -43,6 +46,9 @@ model Booking {
 
   user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   property Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([propertyId])
 }
 
 model Property {
@@ -60,6 +66,8 @@ model Property {
   host     Host?     @relation(fields: [hostId], references: [id], onDelete: SetNull)
   bookings Booking[]
   reviews  Review[]
+
+  @@index([hostId])
 }
 
 model Host {

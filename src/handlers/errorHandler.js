@@ -24,10 +24,10 @@ function errorHandler(err, req, res, next) {
         default: {
             status = 500;
             msg = 'An error occurred on the server. Please check your request and try again.';
+            console.error(err.message);
         }
     }
 
-    console.error(err);
     res.status(status).json({ message: msg });
 }
 

@@ -1,20 +1,14 @@
 import baseRouter from "../utils/baseRouter.js";
 import getAllHosts from "../services/hosts/getAllHosts.js";
 import getHostById from "../services/hosts/getHostById.js";
-import createHost from "../services/hosts/createHost.js";
-import updateHostById from "../services/hosts/updateHostById.js";
-import deleteHostById from "../services/hosts/deleteHostById.js";
+import modelData from "../models/hostModel.json" with {type: "json"};
 
-const model = {
-    username: 'string'
-    , password: 'string'
-    , name: 'string'
-    , email: 'string'
-    , phoneNumber: 'string'
-    , pictureUrl: 'string'
-    , aboutMe: 'string'
-};
-
-const router = baseRouter('Host', model, getAllHosts, getHostById, createHost, updateHostById, deleteHostById);
+const model = modelData.model
+    , router = baseRouter({
+        itemType: 'host'
+        , model: model
+        , getAllItems: getAllHosts
+        , getItemById: getHostById
+    });
 
 export default router;

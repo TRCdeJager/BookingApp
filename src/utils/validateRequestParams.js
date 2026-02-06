@@ -1,6 +1,7 @@
 import BadRequestError from "../errors/BadRequestError.js";
 
 function validateRequestParams(query, minKeys) {
+    // console.log({ minKeys });
     //no model, no problem
     if (!(minKeys?.length)) return query;
 
